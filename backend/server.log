@@ -1,0 +1,10 @@
+INFO:     Started server process [4010743]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:38102 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38106 - "POST /api/decompile HTTP/1.1" 200 OK
+INFO:     127.0.0.1:32948 - "POST /api/decompile HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43174 - "POST /api/decompile HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57854 - "OPTIONS /api/decompile HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53992 - "POST /api/decompile HTTP/1.1" 200 OK

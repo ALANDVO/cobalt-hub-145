@@ -1,0 +1,87 @@
+
+{
+  "schema_version": 1,
+  "current_feature": "fastapi-react-skeleton",
+  "features": [
+    {
+      "id": "fastapi-react-skeleton",
+      "title": "FastAPI/React skeleton with binary upload and decompile endpoint",
+      "status": "done",
+      "acceptance": [
+        "FastAPI backend starts on port 8000",
+        "React frontend starts on port 3000",
+        "POST /api/decompile accepts binary upload and returns decompilation result",
+        "Frontend shows upload form and displays decompilation output"
+      ],
+      "implementation": [],
+      "tests": []
+    },
+    {
+      "id": "vtable-analysis",
+      "title": "Vtable function call resolution in decompiler (issue #516)",
+      "status": "planned",
+      "acceptance": [
+        "Decompiler recognizes vtable pointer in struct/class",
+        "Indirect calls through vtable show resolved function names",
+        "UI allows marking struct field as vtable"
+      ],
+      "implementation": [],
+      "tests": []
+    },
+    {
+      "id": "switch-recovery",
+      "title": "Switch statement recognition (issue #2628)",
+      "status": "planned",
+      "acceptance": [
+        "Decompiler recognizes jump table patterns",
+        "Produces switch/case constructs in output"
+      ],
+      "implementation": [],
+      "tests": []
+    },
+    {
+      "id": "jmp-call-recovery",
+      "title": "JMP with PUSH return address recognition (issue #5747)",
+      "status": "planned",
+      "acceptance": [
+        "Decompiler recognizes PUSH+JMP as CALL with return",
+        "Control flow continues after call instead of returning"
+      ],
+      "implementation": [],
+      "tests": []
+    },
+    {
+      "id": "m68k-linea-linef",
+      "title": "M68000 lineA/lineF opcode support (issue #487)",
+      "status": "planned",
+      "acceptance": [
+        "Disassembler handles 0xAxxx and 0xFxxx opcodes",
+        "Vectors at 0x0A/0x0B recognized"
+      ],
+      "implementation": [],
+      "tests": []
+    },
+    {
+      "id": "cross-segment-strings",
+      "title": "Cross-segment string display in decompiler (issue #4865)",
+      "status": "planned",
+      "acceptance": [
+        "String references resolved across memory segments",
+        "Decompiler shows string literals instead of addresses"
+      ],
+      "implementation": [],
+      "tests": []
+    },
+    {
+      "id": "batch-decompilation-perf",
+      "title": "Batch decompilation performance (issue #2791)",
+      "status": "planned",
+      "acceptance": [
+        "Decompilation scales beyond 10 threads",
+        "I/O bottleneck identified and mitigated"
+      ],
+      "implementation": [],
+      "tests": []
+    }
+  ]
+}
