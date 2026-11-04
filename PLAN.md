@@ -18,6 +18,10 @@ Acceptance:
 - POST /api/decompile accepts binary upload and returns decompilation result
 - Frontend shows upload form and displays decompilation output
 
+Implementation: `backend/main.py`, `frontend/src/App.jsx`
+
+Tests: `backend/test_decompile.py`
+
 ### vtable-analysis — Vtable function call resolution in decompiler (issue #516)
 
 Status: planned

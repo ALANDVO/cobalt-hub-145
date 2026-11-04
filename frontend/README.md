@@ -1,16 +1,27 @@
-# React + Vite
+# cobalt-hub-145 Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+React + Vite frontend for the cobalt-hub-145 decompiler.
 
-Currently, two official plugins are available:
+## Development
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-## React Compiler
+The frontend will be available at http://localhost:3000.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the Oxlint configuration
+- Binary file upload with drag-and-drop support
+- Architecture selection (x86, ARM, MIPS)
+- Mode selection (16-bit, 32-bit, 64-bit)
+- Decompilation output display with syntax highlighting
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## API Integration
+
+The frontend communicates with the FastAPI backend at `http://localhost:8000/api/decompile`.
+</arg_key>
+<arg_key=i>
+Update frontend README
