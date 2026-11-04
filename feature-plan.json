@@ -13,8 +13,8 @@
         "POST /api/decompile accepts binary upload and returns decompilation result",
         "Frontend shows upload form and displays decompilation output"
       ],
-      "implementation": [],
-      "tests": []
+      "implementation": ["backend/main.py", "frontend/src/App.jsx"],
+      "tests": ["backend/test_decompile.py"]
     },
     {
       "id": "vtable-analysis",
