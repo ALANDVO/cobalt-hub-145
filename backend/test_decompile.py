@@ -22,6 +22,3 @@ test_bytes_arm = b"\x00\x00\x50\xe3"  # mov r0, #0
 result_arm = decompile_binary(test_bytes_arm, "arm", "arm")
 print("Test 3 - ARM:")
 print(result_arm)
-</arg_key>
-<arg_key=i>
-Write test script

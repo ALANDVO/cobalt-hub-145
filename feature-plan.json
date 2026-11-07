@@ -1,7 +1,6 @@
-
 {
   "schema_version": 1,
-  "current_feature": "fastapi-react-skeleton",
+  "current_feature": "vtable-analysis",
   "features": [
     {
       "id": "fastapi-react-skeleton",
@@ -19,14 +18,14 @@
     {
       "id": "vtable-analysis",
       "title": "Vtable function call resolution in decompiler (issue #516)",
-      "status": "planned",
+      "status": "done",
       "acceptance": [
         "Decompiler recognizes vtable pointer in struct/class",
         "Indirect calls through vtable show resolved function names",
         "UI allows marking struct field as vtable"
       ],
-      "implementation": [],
-      "tests": []
+      "implementation": ["backend/main.py", "frontend/src/App.jsx"],
+      "tests": ["backend/test_debug14.py"]
     },
     {
       "id": "switch-recovery",

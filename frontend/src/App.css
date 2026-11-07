@@ -1,6 +1,5 @@
-
 .app {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 2rem;
   font-family: system-ui, -apple-system, sans-serif;
@@ -126,4 +125,229 @@ header h1 {
   word-break: break-all;
   max-height: 500px;
   overflow-y: auto;
+}
+
+/* Vtable Section Styles */
+.vtable-section {
+  background: #fafafa;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.section-header h2 {
+  margin: 0;
+  color: #333;
+}
+
+.toggle-btn {
+  padding: 0.5rem 1rem;
+  background: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.toggle-btn:hover {
+  background: #0052a3;
+}
+
+.vtable-form {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.vtable-form h3 {
+  margin: 0 0 1rem 0;
+  color: #444;
+  font-size: 1rem;
+}
+
+.vtable-entry-row {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-end;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.vtable-entry-row .form-group {
+  flex: 1;
+  min-width: 150px;
+  margin-bottom: 0;
+}
+
+.vtable-entry-row .form-group.small {
+  flex: 0 0 80px;
+}
+
+.remove-btn {
+  padding: 0.5rem 0.75rem;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  height: fit-content;
+}
+
+.remove-btn:hover {
+  background: #c82333;
+}
+
+.add-btn {
+  padding: 0.5rem 1rem;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.add-btn:hover {
+  background: #218838;
+}
+
+.vtable-form .primary-btn {
+  padding: 0.625rem 1.25rem;
+  background: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+.vtable-form .primary-btn:hover:not(:disabled) {
+  background: #0052a3;
+}
+
+.vtable-form .primary-btn:disabled {
+  background: #99c2e8;
+  cursor: not-allowed;
+}
+
+.vtable-form .secondary-btn {
+  padding: 0.625rem 1.25rem;
+  background: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.vtable-form .secondary-btn:hover {
+  background: #5a6268;
+}
+
+.vtables-list h3 {
+  margin: 0 0 1rem 0;
+  color: #444;
+  font-size: 1rem;
+}
+
+.vtables-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.vtables-list .empty {
+  color: #999;
+  font-style: italic;
+  text-align: center;
+  padding: 2rem;
+}
+
+.vtable-item {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.vtable-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.vtable-header strong {
+  font-size: 1rem;
+  color: #333;
+}
+
+.vtable-address {
+  font-family: monospace;
+  color: #666;
+  font-size: 0.875rem;
+}
+
+.delete-btn {
+  padding: 0.375rem 0.75rem;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #c82333;
+}
+
+.vtable-entries-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.vtable-entries-table th,
+.vtable-entries-table td {
+  padding: 0.5rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.vtable-entries-table th {
+  background: #f5f5f5;
+  font-weight: 600;
+  color: #555;
+}
+
+.vtable-entries-table td {
+  font-family: monospace;
+  color: #444;
+}
+
+.vtable-entries-table tr:last-child td {
+  border-bottom: none;
+}
+
+.vtable-entries-table td:last-child {
+  color: #666;
 }

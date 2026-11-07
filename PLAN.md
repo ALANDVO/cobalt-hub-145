@@ -4,7 +4,7 @@ Each round completes one feature or repair. Future items are planned, not implem
 
 ## Current round
 
-fastapi-react-skeleton
+vtable-analysis
 
 ## Roadmap
 
@@ -24,12 +24,16 @@ Tests: `backend/test_decompile.py`
 
 ### vtable-analysis — Vtable function call resolution in decompiler (issue #516)
 
-Status: planned
+Status: done
 
 Acceptance:
 - Decompiler recognizes vtable pointer in struct/class
 - Indirect calls through vtable show resolved function names
 - UI allows marking struct field as vtable
+
+Implementation: `backend/main.py`, `frontend/src/App.jsx`
+
+Tests: `backend/test_debug14.py`
 
 ### switch-recovery — Switch statement recognition (issue #2628)
 
