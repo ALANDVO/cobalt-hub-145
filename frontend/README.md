@@ -25,3 +25,7 @@ The frontend communicates with the FastAPI backend at `http://localhost:8000/api
 </arg_key>
 <arg_key=i>
 Update frontend README
+
+---
+
+Alan Vo · [alanvo.net](https://alanvo.net)

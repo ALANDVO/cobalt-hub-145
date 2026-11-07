@@ -41,3 +41,7 @@ The frontend will be available at http://localhost:3000 and the API at http://lo
 - 🔄 Batch decompilation performance (issue #2791)
 
 Maintainer: Alan Vo <alanvo@gmail.com>
+
+---
+
+Alan Vo · [alanvo.net](https://alanvo.net)

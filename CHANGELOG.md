@@ -26,3 +26,7 @@ Partial code published for continued development. Known issues: STATUS.md.
 - POST /api/decompile accepts binary upload and returns disassembly
 - Frontend upload form with architecture/mode selection
 - Support for x86 (16/32/64-bit), ARM, MIPS architectures
+
+---
+
+Alan Vo · [alanvo.net](https://alanvo.net)
