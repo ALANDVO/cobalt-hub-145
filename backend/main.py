@@ -104,16 +104,18 @@ def decompile_binary(binary_data: bytes, arch: str, mode: str) -> str:
 def detect_vtables(instructions, binary_data: bytes):
     """Detect potential vtables in the binary data."""
     # Simple heuristic: look for arrays of pointers that point to code addresses
+    global _current_ptr_size
     data_start = 0x1000
     data_len = len(binary_data)
+    ptr_size = _current_ptr_size
     
     # Scan for pointer arrays (potential vtables)
-    for offset in range(0, data_len - 8, 4):  # 4-byte pointers for 32-bit
-        if offset + 8 > data_len:
+    for offset in range(0, data_len - ptr_size * 2, ptr_size):
+        if offset + ptr_size * 2 > data_len:
             break
         # Read two consecutive pointers
-        ptr1 = int.from_bytes(binary_data[offset:offset+4], 'little')
-        ptr2 = int.from_bytes(binary_data[offset+4:offset+8], 'little')
+        ptr1 = int.from_bytes(binary_data[offset:offset+ptr_size], 'little')
+        ptr2 = int.from_bytes(binary_data[offset+ptr_size:offset+ptr_size*2], 'little')
         
         # Heuristic: both pointers point within the code section
         if (0x1000 <= ptr1 < 0x1000 + data_len and 
@@ -122,9 +124,9 @@ def detect_vtables(instructions, binary_data: bytes):
             if vtable_addr not in vtables:
                 vt = Vtable(address=vtable_addr, name=f"vtable_{vtable_addr:x}")
                 # Add first few entries
-                for i in range(0, min(20, (data_len - offset) // 4), 4):
-                    if offset + i + 4 <= data_len:
-                        ptr = int.from_bytes(binary_data[offset+i:offset+i+4], 'little')
+                for i in range(0, min(20, (data_len - offset) // ptr_size), ptr_size):
+                    if offset + i + ptr_size <= data_len:
+                        ptr = int.from_bytes(binary_data[offset+i:offset+i+ptr_size], 'little')
                         if 0x1000 <= ptr < 0x1000 + data_len:
                             vt.entries.append(VtableEntry(index=len(vt.entries), address=ptr))
                 if vt.entries:
