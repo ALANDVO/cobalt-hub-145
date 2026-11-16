@@ -37,7 +37,7 @@ Tests: `backend/test_debug14.py`
 
 ### switch-recovery — Switch statement recognition (issue #2628)
 
-Status: planned
+Status: in_progress
 
 Acceptance:
 - Decompiler recognizes jump table patterns
