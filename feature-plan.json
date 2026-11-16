@@ -30,7 +30,7 @@
     {
       "id": "switch-recovery",
       "title": "Switch statement recognition (issue #2628)",
-      "status": "planned",
+      "status": "in_progress",
       "acceptance": [
         "Decompiler recognizes jump table patterns",
         "Produces switch/case constructs in output"

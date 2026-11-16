@@ -42,6 +42,27 @@ class VtableRegisterRequest(BaseModel):
     name: Optional[str] = None
     entries: List[Dict] = []  # [{"index": 0, "address": 0x1234, "name": "func1"}, ...]
 
+# Switch models
+class SwitchEntry(BaseModel):
+    index: int
+    address: int
+    name: Optional[str] = None
+
+class Switch(BaseModel):
+    address: int
+    name: Optional[str] = None
+    entries: List[SwitchEntry] = []
+
+# In-memory switch registry
+def detect_switch_patterns(instructions, binary_data: bytes):
+    """Detect potential switch patterns (jump tables) in the binary data."""
+    pass
+
+def resolve_switch_call(insn) -> Optional[str]:
+    """Try to resolve an indirect jump/call through a switch table."""
+    return None
+switches: Dict[int, Switch] = {}
+
 # In-memory vtable registry
 vtables: Dict[int, Vtable] = {}
 
@@ -83,6 +104,8 @@ def decompile_binary(binary_data: bytes, arch: str, mode: str) -> str:
         
         # Detect potential vtables (arrays of pointers to code)
         detect_vtables(instructions, binary_data)
+        # Detect potential switch patterns (jump tables)
+        detect_switch_patterns(instructions, binary_data)
         
         output_lines = []
         for insn in instructions:
