@@ -43,6 +43,10 @@ Acceptance:
 - Decompiler recognizes jump table patterns
 - Produces switch/case constructs in output
 
+Implementation: `backend/main.py - detect_switch_patterns and resolve_switch_call functions`
+
+Tests: `backend/test_switch.py - new test for switch pattern recognition`
+
 ### jmp-call-recovery — JMP with PUSH return address recognition (issue #5747)
 
 Status: planned

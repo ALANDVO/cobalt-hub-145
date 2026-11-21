@@ -12,8 +12,13 @@
         "POST /api/decompile accepts binary upload and returns decompilation result",
         "Frontend shows upload form and displays decompilation output"
       ],
-      "implementation": ["backend/main.py", "frontend/src/App.jsx"],
-      "tests": ["backend/test_decompile.py"]
+      "implementation": [
+        "backend/main.py",
+        "frontend/src/App.jsx"
+      ],
+      "tests": [
+        "backend/test_decompile.py"
+      ]
     },
     {
       "id": "vtable-analysis",
@@ -24,8 +29,13 @@
         "Indirect calls through vtable show resolved function names",
         "UI allows marking struct field as vtable"
       ],
-      "implementation": ["backend/main.py", "frontend/src/App.jsx"],
-      "tests": ["backend/test_debug14.py"]
+      "implementation": [
+        "backend/main.py",
+        "frontend/src/App.jsx"
+      ],
+      "tests": [
+        "backend/test_debug14.py"
+      ]
     },
     {
       "id": "switch-recovery",
@@ -35,8 +45,12 @@
         "Decompiler recognizes jump table patterns",
         "Produces switch/case constructs in output"
       ],
-      "implementation": [],
-      "tests": []
+      "implementation": [
+        "backend/main.py - detect_switch_patterns and resolve_switch_call functions"
+      ],
+      "tests": [
+        "backend/test_switch.py - new test for switch pattern recognition"
+      ]
     },
     {
       "id": "jmp-call-recovery",
